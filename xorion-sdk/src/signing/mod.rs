@@ -3,8 +3,8 @@
 pub mod eth_signer;
 pub mod sol_signer;
 
-pub use eth_signer::EthereumMessageSigner;
-pub use sol_signer::SolanaMessageSigner;
+pub use eth_signer::EthSigner;
+pub use sol_signer::SolSigner;
 
 /// Generic message signer trait
 pub trait MessageSigner: Send + Sync {

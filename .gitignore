@@ -1,42 +1,40 @@
 ```
-# Rust/Cargo
-target/
-Cargo.lock
-**/*.rs.bk
+# Compiled and build artifacts
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
 
 # Dependencies
-**/node_modules/
+target/
+**/target/
 
-# Logs
+# Logs and temp files
 *.log
+*.tmp
 
-# Environment
-.env
-.env.local
-.env.*
-
-# Editor/IDE
+# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
-*.tmp
 
-# OS
-.DS_Store
-Thumbs.db
+# Environment
+.env
+.env.local
+*.env.*
 
 # Coverage
 coverage/
 htmlcov/
 .coverage
 
-# Build artifacts
-dist/
-build/
-*.exe
-*.dll
-*.so
-*.a
-*.out
+# Rust-specific
+Cargo.lock
+**/Cargo.lock
 ```
