@@ -1,40 +1,39 @@
 ```
-# Compiled and build artifacts
-*.o
-*.obj
-*.a
-*.lib
-*.so
-*.dylib
-*.dll
-*.exe
-*.out
-
 # Dependencies
 target/
 **/target/
 
-# Logs and temp files
-*.log
-*.tmp
+# Compiled files
+**/*.rs.bk
+**/*.pyc
+**/*.pyo
+**/*.pyd
+*.so
+*.dylib
+*.dll
 
-# Editors
+# Environment
+.env
+.env.local
+.env.*
+!.env.example
+
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Environment
-.env
-.env.local
-*.env.*
+# Logs
+*.log
 
 # Coverage
 coverage/
 htmlcov/
 .coverage
 
-# Rust-specific
-Cargo.lock
-**/Cargo.lock
+# Distribution
+dist/
+build/
+*.egg-info/
 ```
