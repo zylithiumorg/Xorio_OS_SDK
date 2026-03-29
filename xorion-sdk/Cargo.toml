@@ -5,72 +5,31 @@ edition.workspace = true
 authors.workspace = true
 license.workspace = true
 repository.workspace = true
-description = "Complete Web3 SDK for Ethereum and Solana blockchains"
-keywords = ["web3", "ethereum", "solana", "blockchain", "sdk"]
-categories = ["cryptography::cryptocurrencies", "api-bindings"]
+description.workspace = true
 
 [dependencies]
-# Async runtime
-tokio.workspace = true
-
-# Serialization
-serde.workspace = true
-serde_json.workspace = true
-
-# Error handling
-thiserror.workspace = true
-
-# Utilities
-hex.workspace = true
-bytes.workspace = true
-log.workspace = true
-env_logger.workspace = true
-async-trait.workspace = true
-
-# Ethereum dependencies
-ethers.workspace = true
-web3.workspace = true
-secp256k1.workspace = true
-bip39.workspace = true
-keccak-hash.workspace = true
-
-# Solana dependencies
-solana-sdk.workspace = true
-solana-client.workspace = true
-solana-transaction-status.workspace = true
-bs58.workspace = true
-
-# Crypto
-sha2.workspace = true
-sha3.workspace = true
-digest.workspace = true
-
-# Additional utilities
-rand = "0.8"
-chrono = "0.4"
-url = "2.5"
+tokio = { version = "1.35", features = ["full"] }
+bip39 = "2.0"
+hdwallet = "0.3"
+web3 = "0.21"
+ethers = { version = "2.0", features = ["full"] }
+secp256k1 = { version = "0.28", features = ["rand", "recovery"] }
+sha3 = "0.10"
+hex = "0.4"
+rlp = "0.5"
+ethereum-types = "0.14"
+solana-sdk = "1.17"
+solana-program = "1.17"
+solana-client = "1.17"
+bs58 = "0.5"
 reqwest = { version = "0.11", features = ["json"] }
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rand = "0.8"
+zeroize = { version = "1.6", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
 
 [dev-dependencies]
-tokio-test = "0.4"
-mockall = "0.12"
-
-[[example]]
-name = "wallet_creation"
-path = "examples/wallet_creation.rs"
-
-[[example]]
-name = "rpc_integration"
-path = "examples/rpc_integration.rs"
-
-[[example]]
-name = "smart_contracts"
-path = "examples/smart_contracts.rs"
-
-[[example]]
-name = "token_transfers"
-path = "examples/token_transfers.rs"
-
-[[example]]
-name = "defi_interactions"
-path = "examples/defi_interactions.rs"
+tokio = { version = "1.35", features = ["full"] }
