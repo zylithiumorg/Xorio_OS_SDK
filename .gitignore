@@ -1,0 +1,42 @@
+```
+# Rust/Cargo
+target/
+Cargo.lock
+**/*.rs.bk
+
+# Dependencies
+**/node_modules/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Build artifacts
+dist/
+build/
+*.exe
+*.dll
+*.so
+*.a
+*.out
+```
